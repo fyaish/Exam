@@ -43,42 +43,48 @@
 
             <div class="form-group">
                 <label for="question">Question</label>
-                <input type="text" id="question" name="question" ng-model="q.question" />
+                <textarea id="question" name="question" ng-model="q.question"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="img_src">Image URL</label>
-                <input type="text" id="img_src" name="img_src" ng-model="q.img_src" />
+                <input type="url" id="img_src" name="img_src" ng-model="q.img_src" />
             </div>
 
             <div class="form-group">
                 <label for="question_type">Question Type</label>
-                <input type="text" id="question_type" name="question_type" ng-model="q.question_type" />
+                <select id="question_type" name="question_type" ng-model="q.question_type">
+                    <option value="multi1">Multiple Choice Question - Allow Only One Answer </option>
+                    <option value="multi2">Multiple Choice Question - Allow More Than One Answer</option>
+                    <option value="tf">True or False Question</option>
+                    <option value="text1">Short text Question</option>
+                    <option value="numeric1">Numerical Answer Question</option>
+                </select>
             </div>
 
-            <div class="form-group">
-                <label for="question_options">Question Options</label>
-                <input type="text" id="question_options" name="question_options" ng-model="q.question_options" />
+            <div class="form-group" ng-show="q.question_type == 'multi1' || q.question_type == 'multi2' ">
+                <label for="options_text">Question Options</label>
+                <textarea id="options_text" cols="30" rows="5" name="options_text" ng-model="q.options_text"></textarea>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" ng-show="q.question_type == 'multi1' || q.question_type == 'multi2' ">
                 <label for="randomize">Randomize Answer Options</label>
-                <input type="text" id="randomize" name="randomize" ng-model="q.randomize" />
-            </div>
-
-            <div class="form-group">
-                <label for="answer">Correct Answer</label>
-                <input type="text" id="answer" name="answer" ng-model="q.answer" />
+                <input type="checkbox" id="randomize" name="randomize" ng-model="q.randomize" />
             </div>
 
             <div class="form-group">
                 <label for="autoCorrect">Auto Correct</label>
-                <input type="text" id="autoCorrect" name="autoCorrect" ng-model="q.autoCorrect" />
+                <input type="checkbox" id="autoCorrect" name="autoCorrect" ng-model="q.autoCorrect" />
+            </div>
+
+            <div class="form-group" ng-show="q.autoCorrect">
+                <label for="answer">Correct Answer Expression</label>
+                <textarea id="answer_exp" cols="30" rows="5" name="answer_exp" ng-model="q.answer_exp"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="autoAnswer">Auto Answer</label>
-                <input type="text" id="autoAnswer" name="autoAnswer" ng-model="q.autoAnswer" />
+                <input type="checkbox" id="autoAnswer" name="autoAnswer" ng-model="q.autoAnswer" />
             </div>
 
             <div class="form-group">
