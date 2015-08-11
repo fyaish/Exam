@@ -1,0 +1,6 @@
+D:\My Projects\Exam2\Exam2\bin\Exam2.dll.config
+D:\My Projects\Exam2\Exam2\bin\Exam2.dll
+D:\My Projects\Exam2\Exam2\bin\Exam2.pdb
+D:\My Projects\Exam2\Exam2\obj\Debug\Exam2.csprojResolveAssemblyReference.cache
+D:\My Projects\Exam2\Exam2\obj\Debug\Exam2.dll
+D:\My Projects\Exam2\Exam2\obj\Debug\Exam2.pdb
