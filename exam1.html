@@ -1,23 +1,21 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
-    <script src="UpdateQuestion.js"></script>
+    <script src="exam1.js"></script>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Update Question </title>
+    <title>AngularJS Service  Factory Tutorial with Example</title>
 </head>
-<body ng-app="sampleApp" ng-controller="SampleCtrl">
+<body ng-app="app" ng-controller="QuestionController">
+
     <h1>Update Question {{q.$id}}</h1>
     <div class="container">
         <form class="form-horizontal">
@@ -103,7 +101,7 @@
                 <label for="hint">Hint</label>
                 <input type="text" id="hint" name="hint" ng-model="q.hint" />
             </div>
-            
+
             <div class="form-group">
                 <label for="autoSave">Auto Save Form</label>
                 <input type="checkbox" id="autoSave" name="autoSave" ng-model="q.autoSave" />
@@ -118,17 +116,41 @@
                         <button ng-click="messages.$remove(message)">Delete Message</button>
                     </li>
                 </ul>
-                <!-- push a new message onto the array -->               
+                <!-- push a new message onto the array -->
                 <input ng-model="newMessageText" />
-                <button type="button" ng-click="addMessage()">Add Message</button>                
+                <button type="button" ng-click="addMessage()">Add Message</button>
             </div>
 
             <br />
             <input type="hidden" ng-model="q.id" />
+
             <input type="button" value="Save Question" ng-click="saveQuestion()" />
             <input type="button" value="Save List" ng-click="saveList()" />
         </form>
-       
-</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Options</th>
+                    <th>Answer</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="question in questions">
+                    <td>{{ question.question }}</td>
+                    <td>{{ question.options }}</td>
+                    <td>{{ question.answer }}</td>
+                    <td>
+                        <a href="#" ng-click="edit(question.$id)">edit</a> |
+                        <a href="#" ng-click="delete(question)">delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>question = {{q | json }}</p>
+        <p>Reponse  = {{ resp | json }}</p>
+    </div>
 </body>
+
 </html>

@@ -6,10 +6,10 @@ app.controller("SampleCtrl", function ($scope, $firebaseObject, $firebaseArray) 
     // download the data into a local object
     var syncObjectQuestion = $firebaseObject(refQuestion);
 
-    // synchronize the object with a three-way data binding
-    // click on `index.html` above to see it used in the DOM!
-    syncObjectQuestion.$bindTo($scope, "q");
 
+    // synchronize the object with a three-way data binding
+    syncObjectQuestion.$bindTo($scope, "q");
+ 
     //////////////
 
     var refMessages = refQuestion.child('messages');
@@ -26,4 +26,9 @@ app.controller("SampleCtrl", function ($scope, $firebaseObject, $firebaseArray) 
         $scope.newMessageText = "";
     };
 
+    $scope.saveQuestion = function () {
+        var refNewQuestion = new Firebase("https://amber-torch-2469.firebaseio.com/Questions");
+        var syncArrayQuestion = $firebaseArray(refNewQuestion);
+        syncArrayQuestion.$add($scope.q);
+    };
 });

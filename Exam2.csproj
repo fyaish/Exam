@@ -58,9 +58,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="ionic\test1.html" />
+    <Content Include="ionic\test1.js" />
     <Content Include="q1.html" />
     <Content Include="q1.js" />
+    <Content Include="q2.html" />
+    <Content Include="q2.js" />
+    <Content Include="ratchet-v2.0.2\css\ratchet-theme-android.css" />
+    <Content Include="ratchet-v2.0.2\css\ratchet-theme-android.min.css" />
+    <Content Include="ratchet-v2.0.2\css\ratchet-theme-ios.css" />
+    <Content Include="ratchet-v2.0.2\css\ratchet-theme-ios.min.css" />
+    <Content Include="ratchet-v2.0.2\css\ratchet.css" />
+    <Content Include="ratchet-v2.0.2\css\ratchet.min.css" />
+    <Content Include="ratchet-v2.0.2\fonts\ratchicons.svg" />
+    <Content Include="ratchet-v2.0.2\js\ratchet.js" />
+    <Content Include="ratchet-v2.0.2\js\ratchet.min.js" />
+    <Content Include="ratchet.html" />
     <Content Include="tutorial1.html" />
+    <Content Include="UpdateQuestion.html" />
+    <Content Include="UpdateQuestion.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="q1.json" />
+    <Content Include="ratchet-v2.0.2\fonts\ratchicons.eot" />
+    <Content Include="ratchet-v2.0.2\fonts\ratchicons.ttf" />
+    <Content Include="ratchet-v2.0.2\fonts\ratchicons.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
