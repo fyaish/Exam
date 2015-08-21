@@ -1,0 +1,49 @@
+﻿<html ng-app="sampleApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="http://angular-google-chart.github.io/angular-google-chart/ng-google-chart.js"></script>
+    
+    <script src="eval2.js"></script>
+</head>
+<body ng-controller="SampleCtrl">
+    User 1: 
+    <button type="button" ng-click="like('u1', 1)">Like +1</button>
+    <button type="button" ng-click="like('u1', 2)">Like +2</button>
+    <button type="button" ng-click="like('u1', 3)">Like +3</button>
+     - - - -
+    <button type="button" ng-click="like('u1', -1)">Like -1</button>
+    <button type="button" ng-click="like('u1', -2)">Like -2</button>
+    <button type="button" ng-click="like('u1', -3)">Like -3</button>
+<br /><br /><br />
+
+    User 2:
+    <button type="button" ng-click="like('u2', 1)">Like +1</button>
+    <button type="button" ng-click="like('u2', 2)">Like +2</button>
+    <button type="button" ng-click="like('u2', 3)">Like +3</button>
+    - - - -
+    <button type="button" ng-click="like('u2', -1)">Like -1</button>
+    <button type="button" ng-click="like('u2', -2)">Like -2</button>
+    <button type="button" ng-click="like('u2', -3)">Like -3</button>
+    <br /><br /><br />
+
+    User 3:
+    <button type="button" ng-click="like('u3', 1)">Like +1</button>
+    <button type="button" ng-click="like('u3', 2)">Like +2</button>
+    <button type="button" ng-click="like('u3', 3)">Like +3</button>
+    - - - -
+    <button type="button" ng-click="like('u3', -1)">Like -1</button>
+    <button type="button" ng-click="like('u3', -2)">Like -2</button>
+    <button type="button" ng-click="like('u3', -3)">Like -3</button>
+    <br /><br /><br />
+
+    Total = {{getTotal()}}
+    
+    <br /><br /><br />
+
+    <div google-chart chart="chartObject"></div>
+</body>
+</html>

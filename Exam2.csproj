@@ -58,12 +58,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="eval2.html" />
+    <Content Include="eval2.js" />
+    <Content Include="exam1.html" />
+    <Content Include="exam1.js" />
     <Content Include="ionic\test1.html" />
     <Content Include="ionic\test1.js" />
     <Content Include="q1.html" />
     <Content Include="q1.js" />
     <Content Include="q2.html" />
     <Content Include="q2.js" />
+    <Content Include="question1.html" />
+    <Content Include="question1.js" />
     <Content Include="ratchet-v2.0.2\css\ratchet-theme-android.css" />
     <Content Include="ratchet-v2.0.2\css\ratchet-theme-android.min.css" />
     <Content Include="ratchet-v2.0.2\css\ratchet-theme-ios.css" />
@@ -74,6 +80,8 @@
     <Content Include="ratchet-v2.0.2\js\ratchet.js" />
     <Content Include="ratchet-v2.0.2\js\ratchet.min.js" />
     <Content Include="ratchet.html" />
+    <Content Include="service-demo.html" />
+    <Content Include="service-questions.html" />
     <Content Include="tutorial1.html" />
     <Content Include="UpdateQuestion.html" />
     <Content Include="UpdateQuestion.js" />
